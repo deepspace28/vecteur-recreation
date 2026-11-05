@@ -202,8 +202,7 @@ vcForm.addEventListener('submit', (e) => {
 const vcSyncTheme = () => { chatRoot.dataset.theme = landing.dataset.theme; };
 vcSyncTheme();
 const _origUpdateThemeLabel = updateThemeLabel;
-// wrap theme toggle
+
 themeToggle.addEventListener('click', () => setTimeout(vcSyncTheme, 0));
 
-// close on Escape
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !vcPanel.hidden) vcClosePanel(); });
